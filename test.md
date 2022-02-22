@@ -55,6 +55,9 @@ ___
 하지만 이미지의 주소를 확인하기 힘들어 삽입하기가 조금 곤란하였는데요. 
 issues탭에서 이미지 주소를 간단하게 확인할 수 있습니다.
 
+https://media.giphy.com/media/bWOUXvclrHZih7cd4b/giphy.gif
+
+
 
 
 
