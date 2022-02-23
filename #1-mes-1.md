@@ -12,13 +12,11 @@
 - logistic regression :  m1 <- glm( P_F ~ x1 + x2 + x3 + x4 , data= x, family = binomial)
 - Check the analyzed model : summary(m1)
 - Check the analysis results : logit_f <- fitted( m1)
--- head(logit_f)
--- f1 <- round(logit_f )
-- table( f1)
-
-___
-- data.frame 으로 비교
+ ___
 ```
+head(logit_f)
+f1 <- round(logit_f )
+table( f1)
 x1 <- as.data.frame( f1)
 names(x1) <- c( "v1")
 x1$v2 <- ifelse( x1$v1 >.5, 1,0)
