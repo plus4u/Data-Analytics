@@ -18,17 +18,16 @@
 
 ___
 - data.frame 으로 비교
-'''
-- x1 <- as.data.frame( f1)
-- names(x1) <- c( "v1")
-- x1$v2 <- ifelse( x1$v1 >.5, 1,0)
-- is_correct <- ifelse( f1 >.5, 1,0) == as.numeric( x$P_F) # P_F --> 1 ~2
-- * is_correct <- ifelse( f1 >.5, 1,0) == x$P_F 
-- table( is_correct)
-- sum(is_correct)/ NROW(is_correct)
- '''
- ___
-- predict 
+```
+x1 <- as.data.frame( f1)
+names(x1) <- c( "v1")
+x1$v2 <- ifelse( x1$v1 >.5, 1,0)
+is_correct <- ifelse( f1 >.5, 1,0) == as.numeric( x$P_F) # P_F --> 1 ~2
+is_correct <- ifelse( f1 >.5, 1,0) == x$P_F 
+table( is_correct)
+sum(is_correct)/ NROW(is_correct)
+ 
+# predict 
 x1 <- c ( 85, 80, 90, 80, 81)
 x2 <- c ( 85, 80, 90, 80, 80)
 x3 <- c ( 75, 80, 90, 80, 80)
@@ -40,15 +39,12 @@ str(te)
  
 p1 <- predict( m1, newdata = te , type = "response") 
 
-p1
-
-ibrary(Epi)
+```
 
 ### Epi ROC 활용 
-a1=ROC(form=male~height,data=radial,plot="ROC")
-
+```
+ibrary(Epi)
 a1= ROC(form = P_F ~ x1 + x2 + x3 + x4 , data= x, plot="ROC")
-
 a1
 optimal_lr.eta=function(x){
   no=which.max(x$res$sens+x$res$spec)[1]
@@ -67,9 +63,9 @@ optimal_cutpoint=function(x){
   result
 } 
 
-##
+optimal_cutpoint(a1) # 
 
-optimal_cutpoint(a1) 
+```
 
 
 
